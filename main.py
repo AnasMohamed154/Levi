@@ -1,3 +1,4 @@
+.
 def encode(text: str, shift: int) -> str:
     text = text.upper()
     result = ""
@@ -16,3 +17,11 @@ def encode(text: str, shift: int) -> str:
 
 def decode(text: str, shift: int) -> str:
     return encode(text, -shift)
+
+
+# Easy Testing
+message = input("Enter your message: ")
+move = int(input("Move (1, 2, 3...): "))
+
+print("Encrypted:", encode(message, move))
+print("Decrypted:", decode(encode(message, move), move))
